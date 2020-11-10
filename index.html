@@ -20,7 +20,7 @@
         .then(function(response) {
             return response.text()
         })
-        .ther(function(my_text) {
+        .then(function(my_text) {
             fetch(url1, {
             body: my_text, // must match 'Content-Type' header
             credentials: 'include', // include, same-origin, *omit
